@@ -1,0 +1,104 @@
+- case_id: 0
+  api_name: V小程序
+  discriptions: 我的-可提现金额
+  url: /mapi/v3/bank
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 1
+  api_name: V小程序
+  discriptions: 我的-用户授权绑定信息
+  url: /mapi/v3/user/auth
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0,
+    message: 'SUCCESS'
+
+
+- case_id: 2
+  api_name: V小程序
+  discriptions: 我的-我的任务列表-进行中
+  url: /mapi/v4/activity/sub?limit=10&offset=0&activityType=1001
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 3
+  api_name: V小程序
+  discriptions: 我的-我的任务列表-已完成
+  url: /mapi/v4/activity/sub?limit=10&offset=0&activityType=1002
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 4
+  api_name: V小程序
+  discriptions: 我的-我的任务列表-已失败
+  url: /mapi/v4/activity/sub?limit=10&offset=0&activityType=1003
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 5
+  api_name: V小程序
+  discriptions: 我的-地址管理-地址列表
+  url: /api/addresss
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 6
+  api_name: V小程序
+  discriptions: 我的-地址管理-编辑地址
+  url: /api/addresss/5d75ca9bd7a0590006a20226
+  method: put
+  header:
+    Content_Type: application/json
+  param:
+    address: "讯美科技广场3号楼22"
+    city: "深圳市"
+    district: "南山区"
+    is_default: 0
+    mobile: "13640993513"
+    name: "深圳测试"
+    province: "广东省"
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'

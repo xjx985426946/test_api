@@ -1,0 +1,124 @@
+
+v1/kaola/product/test
+{
+    "product_name": "Honeywell 霍尼韦尔 KJ305F-PAC2101T1 智能空气净化器K APP远程控制",
+    "product_desc": " Honeywell 霍尼韦尔 智能空气净化器",
+    "images": "http://haitao.nos.netease.com/1bj2lfplo25_800_800.jpg;http://haitao.nos.netease.com/1bj2lfv0t34_800_800.jpg;http://haitao.nos.netease.com/1bj2lft9j0_800_800.jpg;http://haitao.nos.netease.com/1bj2lg14c54_800_800.jpg;http://haitao.nos.netease.com/1bj2lg38i56_800_800.jpg",
+    "categories": "979",
+    "product_tags": "空气净化器 生活电器 家用电器 数码家电;家用电器",
+    "postage_id": "0",
+    "product_type": 0,
+    "rich_text": "<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_0_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_500_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_1000_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_1500_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_2000_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_2500_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_3000_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_3500_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_4000_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_4500_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_5000_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_5500_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_6000_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_6500_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_7000_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_7500_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_8000_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_8500_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_9000_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_9500_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_10000_710_500\" /></p> \n<p style=\"text-align:center;\"><img src=\"http://haitao.nos.netease.com/1bj2lgr4418_710_10589.jpg?imageView&amp;quality=98&amp;crop=0_10500_710_89\" /></p>",
+    "unit_weight": 0,
+    "sell_status": 0,
+    "product_species": 1,
+    "attributes": [
+        {
+            "name": "气态净化CADR",
+            "value": "[100-199]"
+        },
+        {
+            "name": "固态净化CADR",
+            "value": "[300-399]"
+        },
+        {
+            "name": "固态污染物CCM",
+            "value": "[P4]"
+        },
+        {
+            "name": "适用面积",
+            "value": "[31平方米(含)-40平方米(含)]"
+        },
+        {
+            "name": "品名",
+            "value": "[ Honeywell 霍尼韦尔 J305F-PAC2101T1 智能空气净化器K APP远程控制 ]"
+        },
+        {
+            "name": "电压",
+            "value": "[220V]"
+        },
+        {
+            "name": "颜色",
+            "value": "[棕色]"
+        },
+        {
+            "name": "供电方式",
+            "value": "[交流电]"
+        },
+        {
+            "name": "适合中国电压",
+            "value": "[是]"
+        },
+        {
+            "name": "功能",
+            "value": "[除甲醛, 除烟除尘, 负离子, 除异味]"
+        },
+        {
+            "name": "售后服务",
+            "value": "[全国联保]"
+        },
+        {
+            "name": "气态污染物CCM",
+            "value": "[F3]"
+        },
+        {
+            "name": "适用场景",
+            "value": "[家用]"
+        },
+        {
+            "name": "型号",
+            "value": "[J305F-PAC2101T1]"
+        }
+    ],
+    "stock": [
+        {
+            "sku": "1554149-1ca74aa22180676cd6ca3d1181aedcb0",
+            "delivery_price": 2677.00,
+            "market_price": 3980,
+            "guide_price": 3599,
+            "tax_rates": [
+                0
+            ],
+            "quantity": 0,
+            "image_url": "http://haitao.nos.netease.com/1bj2lgkc561_800_800.jpg",
+            "standards": [
+                {
+                    "name": "颜色",
+                    "value": "棕色"
+                }
+            ],
+            "sku_sell_status": 1,
+            "tax_free": true
+        }
+    ],
+    "extension": {
+        "brandName": "Honeywell",
+        "warehouseStores": "{\"杭州顺丰大贸仓\":{\"warehouseName\":\"杭州顺丰大贸仓\",\"warehouseId\":86,\"warehouseStore\":0},\"杭州党湾退货仓\":{\"warehouseName\":\"杭州党湾退货仓\",\"warehouseId\":4261,\"warehouseStore\":0},\"杭州临平顺丰大贸仓\":{\"warehouseName\":\"杭州临平顺丰大贸仓\",\"warehouseId\":25601,\"warehouseStore\":0}}",
+        "isFreeTax": "1",
+        "memberCount": "0",
+        "skuProperty": "{\"气态净化CADR\":[\"100-199\"],\"固态净化CADR\":[\"300-399\"],\"固态污染物CCM\":[\"P4\"],\"适用面积\":[\"31平方米(含)-40平方米(含)\"],\"品名\":[\" Honeywell 霍尼韦尔 J305F-PAC2101T1 智能空气净化器K APP远程控制 \"],\"电压\":[\"220V\"],\"颜色\":[\"棕色\"],\"供电方式\":[\"交流电\"],\"适合中国电压\":[\"是\"],\"功能\":[\"除甲醛\",\"除烟除尘\",\"负离子\",\"除异味\"],\"售后服务\":[\"全国联保\"],\"气态污染物CCM\":[\"F3\"],\"适用场景\":[\"家用\"],\"型号\":[\"J305F-PAC2101T1\"]}",
+        "brandCountryName": "美国",
+        "taxRate": "0",
+        "importType": "3",
+        "taxRates": "[0]",
+        "isPresell": "0",
+        "subTitle": "榉木纹版智能空净，彰显不凡品味，自动空气质量监测，净化时间预估。数显滤网寿命，有效除甲醛和PM2.5。支持多点远程遥控，多种模式设定，净化效果好！\n",
+        "brandId": "1789",
+        "isSelf": "true"
+    },
+    "shop_info": {
+        "shop_id": "58a27a340006f99e7cb43086",
+        "shop_name": "蜂巢数据"
+    },
+    "tax_free": true,
+    "third_product_id": "1554149",
+    "info": {
+        "changeTypes":[9],
+        "goodsId":1554149
+    }
+}
+v1/kaola/product/update
+{
+    "changeTypes":[9],
+    "goodsId":1554149
+}

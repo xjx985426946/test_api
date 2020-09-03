@@ -1,0 +1,393 @@
+- case_id: 0
+  api_name: 新增商品
+  discriptions: 成功新增商品
+  url: store/frontend/product
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    delivery_country: "全国"
+    product_type: 0
+    title: "测试商品"
+    description: "测试商品的描述"
+    product_serial_number: "测试商品的描述"
+    categories: [256, 571, 991]
+    tags: ["美妆"]
+    attributes: [{"name":"001","options":["001"]}]
+    postage_id: 0
+    stock:
+      - standards:
+          - name: "尺码"
+            value: "39"
+          - name: "颜色"
+            value: "红色"
+        price: "100"
+        quantity: "10"
+        sku_serial_number: "001"
+    card_type: "common"
+    default_share_text: "实惠好用"
+    images:
+      - src: "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png"
+    rich_text: "<h2><span style=\"font-weight: bold;\"></span><img src=\"http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png\" style=\"color: rgba(0, 0, 0, 0.65); font-family: &quot;Chinese Quote&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; max-width: 100%;\"><br></h2>"
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 1
+  api_name: 定向发送智蜂卡
+  discriptions: 成功定向发布蜂卡
+  url: frontend/intbee-cards/creation
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    card_cover: 'http://static.d.intbee.com/userid/FmvvD40-dTh05YgAjupo1ltYAuUD.png'
+    postage_id: 0
+    product_id: $product_id  #替换产品的product_id
+    product_price: "0.10"
+    reward: "0.01"
+    locale: "10.00"
+    target_sales_num: 10
+    card2_activities: []
+    vip_reward: "0.01"
+    bargain_status: 0
+    bargain_bottom: 0
+    bargain_upper: 0
+    uuids: ["5bea2cdf7663830006f140c2"]
+    card_type: 2
+  Expect:
+    code: 0
+    message: '成功'
+
+
+- case_id: 2
+  api_name: 上架智蜂卡
+  discriptions: 成功上架蜂卡
+  url: api/v2/intbee-subcards/      #拼接card_id     12030/acception
+  method: put
+  header:
+    Content_Type: application/json
+  param: null
+  Expect:
+    code: 0
+    message: '成功接受智蜂卡！'
+
+
+- case_id: 3
+  api_name: C端提交订单
+  discriptions: 成功提交订单
+  url: frontend/customer/item/    #拼接product_id 18547/subscription/order
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    spreader_uuid: '5bea2cdf7663830006f140c2'
+    subcard_id: $subcard_id   #子卡id
+    address_id: 49268   #地址id
+    is_need_invoice: 0
+    invoice_type: 0
+    invoice_title: ""
+    district_code: -1
+    platform_id: "4"
+    sku_list: [{'sku':'F18547149621','quantity':1}]     #F+ product_id + card_id + 规格
+    taxpayer_id: ""
+    customer_remarks: ""
+    coupon_id: ""
+    product_type: 0
+  Expect:
+    code: 0
+    message: '成功'
+
+- case_id: 4
+  api_name: C端进入支付页面
+  discriptions: 进入支付页面
+  url: public/subscription/      #79924/101154141341545895/alipay    #拼接订单ID的订单号
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    ali_version: "v2"
+  Expect:
+    code: 0
+    message: '成功'
+
+- case_id: 5
+  api_name: 取消订单
+  discriptions: 成功取消订单
+  url: api/square/v1/order/       #79937     #拼接order_id
+  method: delete
+  header:
+    Content_Type: application/json
+  param: null
+  Expect:
+    code: 0
+    message: '操作成功'
+
+- case_id: 6
+  api_name: F端查询订单状态
+  discriptions: 成功查询订单状态
+  url: store/frontend/order/key
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    limit: 6
+    status: ''
+    keys: $order_id
+    key_type: 0
+    offset: 0
+  Expect:
+    code: 0
+    message: 'success'
+    status: $status   #替换状态
+
+
+- case_id: 7
+  api_name: F端发货
+  discriptions: 成功发货
+  url: frontend/orders/delivery/    #79934 拼接订单order_id
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    carrier_company_no: SF
+    carrier_company: "顺丰快递"
+    carrier_no: 1111006
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 8
+  api_name: C端用户查询待收货订单
+  discriptions: 成功查询用户待收货订单
+  url: api/square/v1/order/1
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    t: $time
+    status: delivering
+    limit: 8
+  Expect:
+    code: 0
+    message: '操作成功'
+
+
+- case_id: 9
+  api_name: C端确认收获
+  discriptions: 成功确认收货
+  url: api/square/v1/order/confirm/       #79934 拼接order_id
+  method: post
+  header:
+    Content_Type: application/json
+  param: {}
+  Expect:
+    code: 0
+    message: '操作成功'
+
+
+
+- case_id: 10
+  api_name: C端申请退款
+  discriptions: 成功申请退款
+  url: api/square/v1/order/refund/   #101154147052845897 拼接订单号
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    reason: "不想要了"
+    order_id: $order_id  #替换order_id
+  Expect:
+    code: 0
+    message: '操作成功'
+
+
+
+
+- case_id: 11
+  api_name: C评价商品
+  discriptions: 成功评价商品
+  url: api/square/v1/comment/thread/           #  18626/batch  拼接商品productId
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    productId: $productId
+    threads:
+      - message: '111'
+        uuid: '5bea2cdf7663830006f140c2'
+        anonymous: 1
+        type: 0
+        remark: '规格：42、50ml、红色"'
+        imgs: []
+  Expect:
+    code: 0
+    message: 'request success'
+
+
+- case_id: 12
+  api_name: C端申请退货
+  discriptions: 成功申请退货
+  url: api/square/v1/order/return/       #拼接订单号  101154163974835990
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    reason: '不想要了'
+    type: '已收到货，退货'
+    message: '不想要了'
+    order_id: $order_id
+    certificates: []
+    delivery_way: '百世快递'
+    delivery_no: '1001'
+    delivery_company_no: 'HTKY'
+  Expect:
+    code: 0
+    message: '操作成功'
+
+- case_id: 13
+  api_name: F端拒绝退货
+  discriptions: 成功申请退货
+  url: frontend/orders/return/refuse/       #拼接order_id
+  method: post
+  header:
+    Content_Type: application/json
+  param: null
+  Expect:
+    code: 0
+    message: 'success'
+
+
+
+#- case_id: 7
+#  api_name: 支付回调
+#  discriptions: 支付回调
+#  url: /public/pay/wxpay/notify
+#  method: post
+#  header:
+#    Content_Type: application/json
+#  param:
+#    timestamp: $time
+#    sign: $sign
+#    out_trade_no: $order_no
+#  Expect:
+#    code: 0
+#    message: '成功'
+
+
+- case_id: 14
+  api_name: 发送普通智蜂卡
+  discriptions: 成功发布普通蜂卡
+  url: frontend/intbee-cards/creation
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "card_cover": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+    "postage_id": 0,
+    "product_id": 18940,  #替换product_id
+    "product_price": "100.00",
+    "reward": "0.10",
+    "locale": "0.10",
+    "target_sales_num": 10,
+    "card2_activities": [],
+    "vip_reward": "0.10",
+    "bargain_status": 0,
+    "bargain_bottom": 0,
+    "bargain_upper": 0,
+    "card_type": 0
+  }
+  Expect:
+    code: 0
+    message: '成功'
+
+- case_id: 15
+  api_name: 查询品类商品
+  discriptions: 成功查询品类商品
+  url: api/v2/common/intbee-escards
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    limit: 10
+    offset: 0
+    order: desc
+    searchBy: category
+    searchText: 时尚美妆0时尚彩妆0男士香水0
+    sortby: creationTime
+  Expect:
+    code: 0
+    message: '成功'
+
+- case_id: 16
+  api_name: C端提交送朋友订单
+  discriptions: 成功提交送朋友订单
+  url: frontend/customer/item/
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "coupon_id": "",
+    "customer_remarks": "备注",
+    "is_need_invoice": 1,      #需要发票
+    "invoice_type": 1,         #发票类型
+    "invoice_title": "111122",  #发票抬头
+    "taxpayer_id": "333333",    #发票识别号
+    "sku_list": [{
+                   "sku": "F18989152681",    #F+ product_id + card_id + 规格
+                   "quantity": 1
+                 }],
+    "spreader_uuid": "5bea2cdf7663830006f140c2",
+    "subcard_id": $subcard_id,
+    "platform_id": "0",
+    "message": "uname",   #口令
+    "keywords": "uname",
+    "order_type": 1,
+    "invoice_memo": ""
+  }
+  Expect:
+    code: 0
+    message: '成功'
+
+
+- case_id: 17
+  api_name: C端验证朋友赠送商品
+  discriptions: 成功验证
+  url: public/order2friend/     #NnmIvi/verify 拼接订单keys NnmIvi
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "keywords": "uname"
+  }
+  Expect: {
+    "code": 0,
+    "message": "验证通过",
+    "size": 0
+  }
+
+- case_id: 18
+  api_name: C端获取赠送商品
+  discriptions: 成功获取
+  url: public/order2friend/          #NnmIvi/address  拼接订单keys NnmIvi
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "keywords": "uname",
+    "addresses": [{
+                    "name": "HC",
+                    "mobile": "13729542194",
+                    "state": "广东省",
+                    "city": "深圳市",
+                    "district": "南山区",
+                    "address": "22222"
+                  }]
+  }
+  Expect: {
+    "code": 0,
+    "message": "领取成功",
+    "size": 0
+  }

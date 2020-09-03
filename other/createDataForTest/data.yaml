@@ -1,0 +1,538 @@
+- case_id: 0
+  api_name: 创建商品
+  discriptions: 创建普通商品
+  url: fapi/product
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "attributes": [
+    {
+      "name": "颜色",
+      "value": "红色"
+    }
+  ],
+  "categories": "573",
+  "desc_video_url": "1222",
+  "extension": {
+    "additionalProp1": "123",
+    "additionalProp2": "123",
+    "additionalProp3": "123"
+  },
+  "image_video_url": "123",
+  "images": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+#  "postage_id": '5d0b17ce4b0b7d0006a86fce',
+  "product_desc": "商品描述",
+  "product_name": "商品名称",
+  "product_no": "123",
+  "product_species": 1,
+  "product_tags": "商品标签",
+  "product_type": 0,
+  "reward": 0.1,
+  "rich_text": "123456",
+#  "sell_status": 0,
+  "shop_info": {
+    "shop_id": "10179905",
+    "shop_name": "智蜂深圳"
+  },
+  "stock": [
+    {
+      "delivery_price": 0.05,
+      "image_url": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "market_price": 0.05,
+      "quantity": 100,
+      "selling_price": 0.05,
+      "standards": [
+        {
+          "name": "颜色",
+          "value": "红色"
+        }
+      ],
+      "tax_rates": [
+        0
+      ]
+    }
+  ],
+  "tax_free": true,
+  "unit_weight": 10,
+  "vip_reward": 0.01
+}
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 1
+  api_name: 创建免邮商品
+  discriptions: 成功创建免邮商品商品
+  url: fapi/product
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "attributes": [
+    {
+      "name": "颜色",
+      "value": "红色"
+    }
+  ],
+  "categories": "577",
+  "desc_video_url": "1222",
+  "extension": {
+    "additionalProp1": "123",
+    "additionalProp2": "123",
+    "additionalProp3": "123"
+  },
+  "image_video_url": "123",
+  "images": "123",
+  "postage_id": 0,
+  "product_desc": "商品描述",
+  "product_name": "商品名称",
+  "product_no": "123",
+  "product_species": 1,
+  "product_tags": "商品标签",
+  "product_type": 0,
+  "reward": 0.1,
+  "rich_text": "123456",
+  "sell_status": 0,
+  "shop_info": {
+    "shop_id": "10179905",
+    "shop_name": "智蜂深圳"
+  },
+  "stock": [
+    {
+      "delivery_price": 10,
+      "image_url": "123",
+      "market_price": 10,
+      "quantity": 100,
+      "selling_price": 10,
+      "standards": [
+        {
+          "name": "颜色",
+          "value": "红色"
+        }
+      ],
+      "tax_rates": [
+        0
+      ]
+    }
+  ],
+  "tax_free": true,
+  "unit_weight": 10,
+  "vip_reward": 0.01
+}
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 2
+  api_name: 创建蜂卡
+  discriptions: 创建普通蜂卡
+  url: fapi/card/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "card_type": 0,
+  "product_id": $product_id,
+  "reward_amount": 0.01,
+  "reward_vip_amount": 0.01
+  }
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 3
+  api_name: 创建蜂卡
+  discriptions: 创建定向蜂卡
+  url: fapi/card/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "card_type": 2,
+  "product_id": $product_id,
+  "reward_amount": 0.01,
+  "reward_vip_amount": 0.01,
+  "uuids":["5bea2cdf7663830006f140c2"]
+}
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 4
+  api_name: 创建蜂卡
+  discriptions: 创建蜂团蜂卡
+  url: fapi/card/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "reward_amount": 0.01,
+    "reward_vip_amount": 0.01,
+    "card_type": 0,
+    "product_id": "{{product_id}}",
+    "flash_sale": {
+      "begin_gmt": "2019-04-29 15:17:00",
+      "end_gmt": "2019-04-30 14:07:00",
+      "discount_amount": 0.01,
+      "buy_limit": 5
+    }
+  }
+  Expect:
+    code: 0
+    message: 'success'
+
+- case_id: 5
+  api_name: 创建蜂卡
+  discriptions: 创建拼团蜂卡
+  url: fapi/card/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "card_type": 0,
+  "group_buy": {
+    "begin_gmt": "2019-02-22 13:52:53",
+    "buy_limit": 1,
+    "discount_amount": 0.1,
+    "end_gmt": "2019-02-24 13:52:53",
+    "is_simulated": 1,
+    "user_limit":5
+  },
+  "product_id": $product_id,
+  "reward_amount": 0.1,
+  "reward_vip_amount": 0.1
+}
+  Expect:
+    code: 0
+    message: 'success'
+
+- case_id: 6
+  api_name: 接受蜂卡
+  discriptions: 成功接受蜂卡
+  url: mapi/v3/card  #17412/accept
+  method: post
+  header:
+    Content_Type: application/json
+  param: null
+  Expect:
+    code: 0
+    message: 'success'
+
+- case_id: 7
+  api_name: 下单
+  discriptions: 普通卡下单
+  url: capi/trade/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "address_id":"5c7d60c68ec1525f325696ef",
+    "customer_remarks": "买家留言",
+    "district_code": 0,
+    "group_type":0,
+    "invoice": {
+    "email": "123@qq.com",
+    "name": "chen",
+    "taxpayer_id": "1",
+    "type": 0
+  },
+    "order_type":0,
+    "platform_id": 0,
+    "product_id": 32501,
+    "product_type": 0,
+    "quantity": 1,
+    "sku_list": [{
+      "original_price":0.5,
+      "price": 0.05,
+      "quantity":1,
+      "sku": "$product_id"
+    }],
+    "spreader_uuid": "5bea2cdf7663830006f140c2"
+  }
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 8
+  api_name: 新建优惠券
+  discriptions: 新建店铺优惠券（无金额限制）
+  url: fapi/activity/coupon
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "begin_time": 1551160671000,
+  "coupon_price_limit":0,
+  "coupon_num": 1,
+  "coupon_price": 0.03,
+  "description": "优惠券说明100",
+  "end_time": 1553579871000,
+  "is_oriented": 0,
+  "name": "HC创建的优惠券100",
+  "per_num_limit": 1,
+  "template": 1,
+  "use_condition": 0
+}
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 9
+  api_name: 添加运费模板
+  discriptions: 成功添加运费模板
+  url: fapi/postage
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "calculate_way": 1,
+  "delivery_way": {
+    "plus": 10,
+    "postage": 100,
+    "postageplus": 10.00
+  },
+  "name": "运费模板",
+  "rule_list": [
+    {
+      "plus": 10,
+      "postage": 100,
+      "postageplus": 10.00,
+      "province": [
+        {
+          "city_code": [
+            0
+          ],
+          "code": "001",
+          "name": "广东"
+        }
+      ]
+    }
+  ],
+  "shop_info": {
+    "shop_id": "5b2a1535b0bcdf00088d7cea",
+    "shop_name": "智蜂深圳"
+  }
+}
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS",
+    "size": 0
+}
+
+
+#fapi/standard
+- case_id: 10
+  api_name: 添加规格
+  discriptions: 成功添加规格
+  url: fapi/standard
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "category_id": 577,
+  "element": [
+    "笔记本"
+  ],
+  "name": "大小",
+  "shop_info": {
+    "shop_name": "智蜂深圳"
+  },
+  "sort": 0
+}
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS",
+    "size": 0
+}
+
+
+- case_id: 11
+  api_name: 添加地址
+  discriptions: 成功添加地址
+  url: api/address
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "address": "讯美科技3",
+  "city": "深圳市",
+  "country": "中国",
+  "country_code": "001",
+  "district": "讯美科技",
+  "email": "123@qq.com",
+  "is_default": 0,
+  "mobile": "13729542194",
+  "name": "chen2",
+  "province": "广东省"
+}
+  Expect:
+
+
+- case_id: 12
+  api_name: 创建清单
+  discriptions: 创建清单
+  url: mapi/v3/counter/inventory
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "remarks": "创建的清单",
+  "title": "清单title"
+}
+
+
+
+
+
+- case_id: 13
+  api_name: 支付回调
+  discriptions: 支付回调
+  url: public/order/pay/notify/   #{order_no}/wx/1367026602
+  method: post
+  header:
+    Content_Type: application/json
+  param: null
+
+
+- case_id: 14
+  api_name: 发货
+  discriptions: 发货
+  url: fapi/order/delivery/    #10110011554965834363174
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "carrier_company_no": "HTKY",
+    "carrier_company": "百世快递",
+    "carrier_no": "33344444442"
+  }
+
+
+
+- case_id: 15
+  api_name: 下单
+  discriptions: 送好友下单
+  url: capi/trade/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "address_id": "",
+    "customer_remarks": "222",
+    "platform_id": 0,
+    "product_id": 118527,
+    "sku_list": [{
+                   "sku": "118527_1",
+                   "quantity": 1
+                 }],
+    "spreader_uuid": "5bea2cdf7663830006f140c2",
+    "invoice": {},
+    "order_type": 1,
+    "message": "uname",
+    "keywords": "uname"
+  }
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 16
+  api_name: 确认收货
+  discriptions: 确认收货
+  url: capi/order/completed/   #10110011556604615363522
+  method: put
+  header:
+    Content_Type: application/json
+  param: null
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+    size: 0
+
+
+- case_id: 17
+  api_name: 创建蜂卡
+  discriptions: 创建测品蜂卡
+  url: fapi/card/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "card_type": 0,
+  "product_id": $product_id,
+  "reward_amount": 0.01,
+  "reward_vip_amount": 0.01,
+  "plan_open_group": True
+  }
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 18
+  api_name: 添加分销商品
+  discriptions: 添加分销商品
+  url: opensku/sales/product/add
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    sale_products: [{
+      'product_id': 120106,
+      'card_id': 167285,
+      'card_status': 1
+    }]
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 19
+  api_name: 分销确认订单
+  discriptions: 分销成功确认订单
+  url: opensku/sales/order/confirm
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    product_id: 120102
+    sku_list:
+      - sku: '120102_1'
+        quantity: 1
+        sale_price: 0.05
+    delivery:
+      name: '陈海镇'
+      mobile: '13729542194'
+      province: '广东省'
+      city: '深圳市'
+      district: '南山区'
+      address: '讯美科技广场'
+  Expect: {
+  "code": 0,
+  "message": "string",
+  "result": {}
+}
+
+
+
+- case_id: 20
+  api_name: 分销支付
+  discriptions: 分销支付
+  url: opensku/sales/order/    #10110011561343845364106/pay
+  method: post
+  header:
+    Content_Type: application/json
+  param: null
+  Expect: {
+  "code": 0,
+  "message": "string",
+  "result": {}
+}

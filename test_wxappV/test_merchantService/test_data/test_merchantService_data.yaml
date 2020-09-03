@@ -1,0 +1,78 @@
+- case_id: 0
+  api_name: V小程序
+  discriptions: 测算-品类栏目列表
+  url: /api/merchantService/product/categoryList
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 1
+  api_name: V小程序
+  discriptions: 测算-任务描述
+  url: /api/merchantService/task
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0,
+    message: 'SUCCESS'
+    result: {
+      title: "【测算任务】佣金高达85%，分享占卜星座测算专属链接，帮你轻松流量变现  佣金 85%"
+    }
+
+- case_id: 2
+  api_name: V小程序
+  discriptions: 测算-未申请通过-用户
+  url: /api/merchantService/user
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 3
+  api_name: V小程序
+  discriptions: 测算-商品列表
+  url: /api/merchantService/product/page?limit=6&offset=0&category_id=
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    total: 134
+    data: [
+    {
+      merchant_name: 'lingji'
+    }]
+
+- case_id: 4
+  api_name: V小程序
+  discriptions: 测算-商品列表
+  url: /api/merchantService/order/count_daily?start=2020-01-06&end=2020-03-06
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    total: 134
+    data: [
+    {
+      merchant_name: 'lingji'
+    }]

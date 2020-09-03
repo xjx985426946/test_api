@@ -1,0 +1,313 @@
+- case_id: 0
+  api_name: V端app登录
+  discriptions: 用户成功登录
+  url: api/uc/auth/login
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: '13729542194'
+    password: "e10adc3949ba59abbe56e057f20f883e"
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 1
+  api_name: 登录用户
+  discriptions: F端用户密码成功登录
+  url: api/uc/auth/login
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: '13902879682'
+    password: 'e10adc3949ba59abbe56e057f20f883e'
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 2
+  api_name: 登录用户
+  discriptions: 用户密码成功登录
+  url: api/uc/auth/login
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: '13729542194'
+    password: 'e10adc3949ba59abbe56e057f20f883e'
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 3
+  api_name: 获取手机验证码
+  discriptions: 成功获取注册手机验证码
+  url:  api/uc/auth/verify/code/mobile
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: $mobile
+    flag: $flag
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 4
+  api_name: 获取手机验证码
+  discriptions: 邀请赚注册
+  url: api/uc/auth/register?inviter=5e69fdb1d636ab0006f8be5a&task=209
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: $mobile
+    verify_code: 6666a
+    password: 'e10adc3949ba59abbe56e057f20f883e'
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 5
+  api_name: V端添加用户
+  discriptions: V端添加用户
+  url: mapi/v3/user/register
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: $mobile
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 6
+  api_name: 分销获取token
+  discriptions: 分销获取token
+  url: opensku/sales/authorize
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    app_key: '63t7bn99fdkilrurzqhz4q5wp1zse6yr'
+    app_secret: '7rtaqqhvminqomkm0c53txhb1djjylpe'
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 7
+  api_name: 登录分销管理后台
+  discriptions: 登录分销管理后台
+  url: opensku/beesuplly/login
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    mobile: '18306677680'
+    password: '123456'
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 8
+  api_name: F端小程序app登录
+  discriptions: F端小程序用户成功登录
+  url: api/uc/auth/login
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: '13676055719'
+    password: "e10adc3949ba59abbe56e057f20f883e"
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 9
+  api_name: 登录用户
+  discriptions: 用户密码成功登录
+  url: api/uc/auth/login
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: '13640993513'
+    password: 'e10adc3949ba59abbe56e057f20f883e'
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 10
+  api_name: 注册用户
+  discriptions: 注册用户
+  url: api/uc/auth/register
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: $mobile
+    verify_code: 6666a
+    password: 'e10adc3949ba59abbe56e057f20f883e'
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 11
+  api_name: 添加店铺昵称
+  discriptions: 添加店铺昵称
+  url: fapi/user
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    alias: '店铺昵称'
+    authority_certificate: 'https://test-qiniu.intbee.com/FgntGaTVwZt8WbXIHCCtMP3f8oh8'
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 12
+  api_name: 添加店铺名称
+  discriptions: 添加店铺名称
+  url: fapi/shopSetting/update
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    shop_logo: 'http://static.d.intbee.com/userid/FmZvpYRhnjSh9IXhQ72U7ts-PRCk.png'
+    shop_name: '店铺名称'
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 13
+  api_name: 添加客服信息
+  discriptions: 添加客服信息
+  url: fapi/user/supportService
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param: [{"type":"phone","content":"13729542194"},{"type":"qq","content":"957071779"},{"type":"mail","content":"957071779@qq.com "},{"type":"online","content":"957071779"}]
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 14
+  api_name: 获取打款认证金额
+  discriptions: 获取打款认证金额
+  url: fapi/user/certCompanyCache
+  method: get
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param: null
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 15
+  api_name: 添加F用户
+  discriptions: 添加F用户
+  url: fapi/user/register
+  method: get
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: 22222
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 16
+  api_name: 打款认证
+  discriptions: 打款认证
+  url: fapi/user/certCompany
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param: {"busi_name":"4333232","busi_no":"3232323232","bank_name":"工商银行","bank_no":"323332342433432","acct_no":"323332342433432"}
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 17
+  api_name: 金额认证
+  discriptions: 金额认证
+  url: fapi/user/certCompanyValid
+  method: get
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param: {"tran_amount":"0.21"}
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 18
+  api_name: V端添加用户
+  discriptions: V端添加用户
+  url: mapi/v3/user
+  method: get
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: $mobile
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 19
+  api_name: C端添加用户
+  discriptions: C端添加用户
+  url: capi/user
+  method: get
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: $mobile
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 20
+  api_name: V端绑定自媒体
+  discriptions: V端绑定自媒体
+  url: mapi/v3/user/auth/bind
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    blog_name: '666'
+    home_page: 'https://www.xiaohongshu.com/user/profile/580ae4c982ec394a2d10c31e?xhsshare=CopyLink&appuid=580ae4c982ec394a2d10c31e&apptime=1583980523'
+    platform_id: 11
+  Expect:
+    code: 0
+    message: 'SUCCESS'

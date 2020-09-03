@@ -1,0 +1,240 @@
+param: [
+        {
+            "product_name": "日本Naris up娜丽丝防晒喷雾清爽面部全身娜扎同款保湿隔离防晒霜喷雾",
+            "category": "571",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "谢馥春旗舰店工艺国妆鸭蛋香粉40g定妆粉散粉蜜粉晚安粉天然国货 ",
+            "category": "573",
+            "tag": "纯天然",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          } ,
+          {
+            "product_name": "【包邮】丹麦PO 不锈钢内胆带茶隔保温杯 ",
+            "category": "589",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "HoverCamera小黑侠跟拍无人机 ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          } ,
+          {
+            "product_name": "FOREO Luna play露娜洁面仪玩趣版清洁美容洗脸仪保湿仪器去黑头款",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": "塑料"
+          } ,
+          {
+            "product_name": "【预售包邮】欧莱雅（LOREAL）纷泽琉光奢润唇釉202珊瑚诱惑5.5ml ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "LOREAL",
+            "custom_tags": "",
+            "attr_value": ""
+          } ,
+          {
+            "product_name": "【预售包邮】欧莱雅纷泽滋润唇膏 枫叶色RB301明星款 ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "欧莱雅",
+            "custom_tags": "",
+            "attr_value": ""
+          } ,
+          {
+            "product_name": "【预售包邮】纷泽琉光奢润唇釉202珊瑚诱惑5.5ml ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "【预售包邮】欧莱雅纷泽琉光奢润唇釉202珊瑚诱惑5.5ml ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "Nike运动系列 free ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "nike",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "苏泊尔BB杯 男塑料随手花茶杯子冷水杯防漏喝水杯茶隔茶随手办公杯子 ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "618活动",
+            "attr_value": ""
+          },{
+            "product_name": "苏泊尔BB杯 女塑料随手花茶杯子冷水杯防漏喝水杯茶隔茶随手办公杯子 ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "618 苏泊尔BB杯 男女塑料随手花茶杯子冷水杯防漏喝水杯茶隔茶随手办公杯子 ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "美国Naris up娜丽丝防晒喷雾清爽面部全身娜扎同款保湿隔离防晒霜喷雾 ",
+            "category": "571",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "防晒喷雾 ",
+            "category": "571",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "日本面膜 ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "男童外套 ",
+            "category": "1171",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },{
+            "product_name": "阿玛尼服装 ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "阿玛尼口红 ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "mac口红 ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "CHARLES＆KEITH铆钉时尚链条斜挎包",
+            "category": "1171",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "韩国Amore/爱茉莉星星发尾油美妆仙护发精油修复防毛躁柔顺头发70ml",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "法国化妆水",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "蜂团活动日本Naris up娜丽丝防晒喷雾清爽面部全身娜扎同款保湿隔离防晒霜喷雾 ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "测品活动美国Naris up娜丽丝防晒喷雾清爽面部全身娜扎同款保湿隔离防晒霜喷雾 ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          },
+          {
+            "product_name": "智蜂活动防晒喷雾 ",
+            "category": "573",
+            "tag": "",
+            "token": token,
+            "brand": "",
+            "custom_tags": "",
+            "attr_value": ""
+          }]
+
+
+
+
+
+
+

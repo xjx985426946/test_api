@@ -1,0 +1,27 @@
+- case_id: 0
+  api_name: V小程序
+  discriptions: V小程序-任务-任务详情
+  url: /mapi/v3/card/166915
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 1
+  api_name: V小程序
+  discriptions: V小程序-任务-子任务详情
+  url: /mapi/v4/activity/sub/166915
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'

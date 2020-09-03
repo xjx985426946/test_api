@@ -1,0 +1,6 @@
+流程性测试，数据的初始化操作
+
+import time
+    # 将参数的时间替换为当前时间戳
+    for i in test_data:
+        i['param']['t'] = int(round(time.time() * 1000))

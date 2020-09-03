@@ -1,0 +1,1110 @@
+- case_id: 0
+  api_name: 创建商品
+  discriptions: 创建普通商品
+  url: fapi/product
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "attributes": [
+    {
+      "name": "颜色",
+      "value": "红色"
+    }
+  ],
+  "categories": "573",
+  "desc_video_url": "1222",
+  "extension": {
+    "additionalProp1": "123",
+    "additionalProp2": "123",
+    "additionalProp3": "123"
+  },
+  "image_video_url": "123",
+  "images": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+#  "postage_id": '5d0b17ce4b0b7d0006a86fce',
+  "product_desc": "商品描述",
+  "product_name": "商品名称",
+  "product_no": "123",
+  "product_species": 1,
+  "product_tags": "商品标签",
+  "product_type": 0,
+  "reward": 0.1,
+  "rich_text": "123456",
+#  "sell_status": 0,
+  "shop_info": {
+    "shop_id": "10179905",
+    "shop_name": "智蜂深圳"
+  },
+  "stock": [
+    {
+      "delivery_price": 10,
+      "image_url": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd 97i.png",
+      "market_price": 10,
+      "quantity": 100,
+      "selling_price": 10,
+      "standards": [
+        {
+          "name": "颜色",
+          "value": "红色"
+        }
+      ],
+      "tax_rates": [
+        0
+      ]
+    }
+  ],
+  "tax_free": true,
+  "unit_weight": 10,
+  "vip_reward": 0.01
+}
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 1
+  api_name: 创建免邮商品
+  discriptions: 成功创建免邮商品商品
+  url: fapi/product
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "attributes": [
+    {
+      "name": "颜色",
+      "value": "红色"
+    }
+  ],
+  "categories": "577",
+  "desc_video_url": "1222",
+  "extension": {
+    "additionalProp1": "123",
+    "additionalProp2": "123",
+    "additionalProp3": "123"
+  },
+  "image_video_url": "123",
+  "images": "123",
+  "postage_id": 0,
+  "product_desc": "商品描述",
+  "product_name": "商品名称",
+  "product_no": "123",
+  "product_species": 1,
+  "product_tags": "商品标签",
+  "product_type": 0,
+  "reward": 0.1,
+  "rich_text": "123456",
+  "sell_status": 0,
+  "shop_info": {
+    "shop_id": "10179905",
+    "shop_name": "智蜂深圳"
+  },
+  "stock": [
+    {
+      "delivery_price": 10,
+      "image_url": "123",
+      "market_price": 10,
+      "quantity": 100,
+      "selling_price": 10,
+      "standards": [
+        {
+          "name": "颜色",
+          "value": "红色"
+        }
+      ],
+      "tax_rates": [
+        0
+      ]
+    }
+  ],
+  "tax_free": true,
+  "unit_weight": 10,
+  "vip_reward": 0.01
+}
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 2
+  api_name: 创建蜂卡
+  discriptions: 创建普通蜂卡
+  url: fapi/task/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "cps": {
+      "reward_amount": 0.05,
+      "reward_vip_amount": 0.05
+    },
+    "task_info": {
+      "material_copywriting": "string",
+      "material_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_link": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_video": "string",
+      "material_video_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "platform": "string",
+      "task_desc": "任务描述",
+      "task_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "task_name": "任务名称"
+    },
+    "product_id": 1,
+    "task_type": 0
+  }
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 3
+  api_name: 创建蜂卡
+  discriptions: 创建定向蜂卡
+  url: fapi/task/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "cps": {
+      "reward_amount": 0.05,
+      "reward_vip_amount": 0.05
+    },
+    "task_info": {
+      "material_copywriting": "string",
+      "material_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_link": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_video": "string",
+      "material_video_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "platform": "string",
+      "task_desc": "任务描述",
+      "task_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "task_name": "任务名称"
+    },
+    "product_id": 1,
+    "task_type": 0,
+    "uuids":["5bea2cdf7663830006f140c2"]
+  }
+
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 4
+  api_name: 创建蜂卡
+  discriptions: 创建蜂团蜂卡
+  url: fapi/card/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "reward_amount": 0.01,
+    "reward_vip_amount": 0.01,
+    "card_type": 0,
+    "product_id": "{{product_id}}",
+    "flash_sale": {
+      "begin_gmt": "2019-04-29 15:17:00",
+      "end_gmt": "2019-04-30 14:07:00",
+      "discount_amount": 0.01,
+      "buy_limit": 5
+    }
+  }
+  Expect:
+    code: 0
+    message: 'success'
+
+- case_id: 5
+  api_name: 创建蜂卡
+  discriptions: 创建拼团蜂卡
+  url: fapi/card/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "card_type": 0,
+  "group_buy": {
+    "begin_gmt": "2019-02-22 13:52:53",
+    "buy_limit": 1,
+    "discount_amount": 0.1,
+    "end_gmt": "2019-02-24 13:52:53",
+    "is_simulated": 1,
+    "user_limit":5
+  },
+  "product_id": $product_id,
+  "reward_amount": 0.1,
+  "reward_vip_amount": 0.1
+}
+  Expect:
+    code: 0
+    message: 'success'
+
+- case_id: 6
+  api_name: 接受蜂卡
+  discriptions: 成功接受蜂卡
+  url: mapi/v3/card  #17412/accept
+  method: post
+  header:
+    Content_Type: application/json
+  param: null
+  Expect:
+    code: 0
+    message: 'success'
+
+- case_id: 7
+  api_name: 下单
+  discriptions: 普通卡下单
+  url: capi/trade/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "subcard_id":'',
+    "card_id":"",
+    "address_id":"5c7d60c68ec1525f325696ef",
+    "customer_remarks": "买家留言",
+    "district_code": 0,
+    "group_type":0,
+    "invoice": {
+    "email": "123@qq.com",
+    "name": "chen",
+    "taxpayer_id": "1",
+    "type": 0
+  },
+    "order_type":0,
+    "platform_id": 0,
+    "product_id": 32501,
+    "product_type": 0,
+    "quantity": 1,
+    "sku_list": [{
+      "original_price":0.5,
+      "price": 0.05,
+      "quantity":1,
+      "sku": "$product_id"
+    }],
+    "spreader_uuid": "5bea2cdf7663830006f140c2"
+  }
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 8
+  api_name: 新建优惠券
+  discriptions: 新建店铺优惠券（无金额限制）
+  url: fapi/activity/coupon
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "begin_time": 1551160671000,
+  "coupon_price_limit":0,
+  "coupon_num": 1,
+  "coupon_price": 0.03,
+  "description": "优惠券说明100",
+  "end_time": 1553579871000,
+  "is_oriented": 0,
+  "name": "HC创建的优惠券100",
+  "per_num_limit": 1,
+  "template": 1,
+  "use_condition": 0
+}
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 9
+  api_name: 添加运费模板
+  discriptions: 成功添加运费模板
+  url: fapi/postage
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "calculate_way": 1,
+  "delivery_way": {
+    "plus": 10,
+    "postage": 100,
+    "postageplus": 10.00
+  },
+  "name": "运费模板",
+  "rule_list": [
+    {
+      "plus": 10,
+      "postage": 100,
+      "postageplus": 10.00,
+      "province": [
+        {
+          "city_code": [
+            0
+          ],
+          "code": "001",
+          "name": "广东"
+        }
+      ]
+    }
+  ],
+  "shop_info": {
+    "shop_id": "5b2a1535b0bcdf00088d7cea",
+    "shop_name": "智蜂深圳"
+  }
+}
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS",
+    "size": 0
+}
+
+
+#fapi/standard
+- case_id: 10
+  api_name: 添加规格
+  discriptions: 成功添加规格
+  url: fapi/standard
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "category_id": 577,
+  "element": [
+    "笔记本"
+  ],
+  "name": "大小",
+  "shop_info": {
+    "shop_name": "智蜂深圳"
+  },
+  "sort": 0
+}
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS",
+    "size": 0
+}
+
+
+- case_id: 11
+  api_name: 添加地址
+  discriptions: 成功添加地址
+  url: api/address
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "address": "讯美科技3",
+  "city": "深圳市",
+  "country": "中国",
+  "country_code": "001",
+  "district": "讯美科技",
+  "email": "123@qq.com",
+  "is_default": 0,
+  "mobile": "13729542194",
+  "name": "chen2",
+  "province": "广东省"
+}
+  Expect:
+
+
+- case_id: 12
+  api_name: 创建清单
+  discriptions: 创建清单
+  url: mapi/v3/counter/inventory
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "remarks": "创建的清单",
+  "title": "清单title"
+}
+
+
+
+
+
+- case_id: 13
+  api_name: 支付回调
+  discriptions: 支付回调
+  url: public/order/pay/notify/   #{order_no}/wx/1367026602
+  method: post
+  header:
+    Content_Type: application/json
+  param: null
+
+
+- case_id: 14
+  api_name: 发货
+  discriptions: 发货
+  url: fapi/order/delivery/    #10110011554965834363174
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "carrier_company_no": "HTKY",
+    "carrier_company": "百世快递",
+    "carrier_no": "33344444442"
+  }
+
+
+
+- case_id: 15
+  api_name: 下单
+  discriptions: 送好友下单
+  url: capi/trade/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "address_id": "",
+    "customer_remarks": "222",
+    "platform_id": 0,
+    "product_id": 118527,
+    "card_id":"",
+    "subcard_id":"",
+    "sku_list": [{
+                   "sku": "118527_1",
+                   "quantity": 1
+                 }],
+    "spreader_uuid": "5bea2cdf7663830006f140c2",
+    "invoice": {},
+    "order_type": 1,
+    "message": "uname",
+    "keywords": "uname"
+  }
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 16
+  api_name: 确认收货
+  discriptions: 确认收货
+  url: capi/order/completed/   #10110011556604615363522
+  method: put
+  header:
+    Content_Type: application/json
+  param: null
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+    size: 0
+
+
+- case_id: 17
+  api_name: 创建蜂卡
+  discriptions: 创建测品蜂卡
+  url: fapi/card/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "card_type": 0,
+  "product_id": $product_id,
+  "reward_amount": 0.01,
+  "reward_vip_amount": 0.01,
+  "plan_open_group": True
+  }
+  Expect:
+    code: 0
+    message: 'success'
+
+
+- case_id: 18
+  api_name: 添加分销商品
+  discriptions: 添加分销商品
+  url: opensku/sales/product/add
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    sale_products: [{
+      'product_id': 120106,
+      'card_id': 167285,
+      'card_status': 1
+    }]
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 19
+  api_name: 分销确认订单
+  discriptions: 分销成功确认订单
+  url: opensku/sales/order/confirm
+  method: post
+  header:
+    Content_Type: application/json
+  param:
+    product_id: 120102
+    sku_list:
+      - sku: '120102_1'
+        quantity: 1
+        sale_price: 0.05
+    delivery:
+      name: '陈海镇'
+      mobile: '13729542194'
+      province: '广东省'
+      city: '深圳市'
+      district: '南山区'
+      address: '讯美科技广场'
+  Expect: {
+  "code": 0,
+  "message": "string",
+  "result": {}
+}
+
+
+
+- case_id: 20
+  api_name: 分销支付
+  discriptions: 分销支付
+  url: opensku/sales/order/    #10110011561343845364106/pay
+  method: post
+  header:
+    Content_Type: application/json
+  param: null
+  Expect: {
+  "code": 0,
+  "message": "string",
+  "result": {}
+}
+
+
+- case_id: 21
+  api_name: 创建任务
+  discriptions: 创建cps
+  url: fapi/task/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "cps": {
+      "reward_amount": 0.05,
+      "reward_vip_amount": 0.05
+    },
+    "task_info": {
+      "material_copywriting": "string",
+      "material_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_link": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_video": "string",
+      "material_video_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "platform": "string",
+      "task_desc": "任务描述",
+      "task_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "task_name": "任务名称"
+    },
+    "product_id": 1,
+    "task_type": 0
+  }
+  Expect:  {
+  "code": 0,
+  "message": "SUCCESS",
+  "result": true
+}
+
+
+
+
+- case_id: 22
+  api_name: 创建任务
+  discriptions: 创建商品任务含cpm
+  url: fapi/task/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "cpm": {
+      "reward_amount": 0.01,
+      "user_limit": 1
+    },
+    "cps": {
+      "reward_amount": 0.05,
+      "reward_vip_amount": 0.05
+    },
+    "task_info": {
+      "material_copywriting": "string",
+      "material_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_link": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_video": "string",
+      "material_video_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "platform": "string",
+      "task_desc": "任务描述",
+      "task_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "task_name": "任务名称"
+    },
+    "product_id": 1,
+    "task_type": 0
+  }
+  Expect:  {
+  "code": 0,
+  "message": "SUCCESS",
+  "result": true
+}
+
+
+
+
+
+- case_id: 23
+  api_name: 创建任务
+  discriptions: 创建商品任务含测品+cpm
+  url: fapi/task/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "cpp": {
+      "reward_amount": 1,
+      "user_limit": 1
+    },
+    "cpm": {
+      "reward_amount": 1,
+      "user_limit": 1
+    },
+    "cps": {
+      "reward_amount": 0.05,
+      "reward_vip_amount": 0.05
+    },
+    "task_info": {
+      "material_copywriting": "string",
+      "material_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_link": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_video": "string",
+      "material_video_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "platform": "string",
+      "task_desc": "任务描述",
+      "task_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "task_name": "任务名称"
+    },
+    "product_id": 1,
+    "task_type": 0,
+  }
+  Expect:  {
+  "code": 0,
+  "message": "SUCCESS",
+  "result": true
+}
+
+
+- case_id: 24
+  api_name: 审核任务
+  discriptions: 审核通过
+  url: internal/activity/cpm/review
+  method: put
+  header:
+    Content_Type: application/json
+  param: {
+    "card_id": 171829,
+    "remark": "备注原因",
+    "review": true
+  }
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 25
+  api_name: 推广费保证金支付
+  discriptions: 余额支付
+  url: fapi/user/task/pay
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "order_no": "$order_no",
+    "pay_channel": 'YuE',
+  }
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+- case_id: 26
+  api_name: 申请任务
+  discriptions: 申请任务
+  url: mapi/v4/activity/apply/     #{card_id}
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "apply_remark": "申请任务备注",
+    "plan_open_group_time": 1569723134000
+  }
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+
+
+- case_id: 27
+  api_name: 子任务审核
+  discriptions: 审核通过
+  url: internal/activity/cpm/sub/review
+  method: put
+  header:
+    Content_Type: application/json
+  param: {
+    "card_id": 0,
+    "remark": "审核通过",
+    "review": true,
+    "spread_uuid": "5bea2cdf7663830006f140c2"
+  }
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 28
+  api_name: V填写测品地址
+  discriptions: 填写测品地址
+  url: mapi/v4/activity/address/  #{card_id}
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "address": "讯美科技广场",
+    "city": "深圳市",
+    "district": "南山区",
+    "mobile": "13729542194",
+    "name": "陈",
+    "state": "广东省"
+  }
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 29
+  api_name: F端测品发货
+  discriptions: F端测品发货
+  url: fapi/v4/activity/delivery/  #{card_id}/uuid
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "carrier_company_no": "HTKY",
+    "carrier_company": "百世快递",
+    "carrier_no": "33344444442"
+  }
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 30
+  api_name: V确认收货
+  discriptions: 确认收货
+  url: mapi/v4/activity/signdelivery/  #{card_id}
+  method: post
+  header:
+    Content_Type: application/json
+  param: null
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 31
+  api_name: V填写开团地址
+  discriptions:   V填写开团地址
+  url: mapi/v4/activity/addurl/  #{card_id}
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "url": "www.baidu.com"
+  }
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 32
+  api_name: 管理后台验收子任务
+  discriptions:  管理后台验收子任务
+  url: internal/activity/cpm/sub/check
+  method: put
+  header:
+    Content_Type: application/json
+  param: {
+    "card_id": 0,
+    "check": 9,
+    "remark": "验收原因",
+    "spread_uuid": "5bea2cdf7663830006f140c2"
+  }
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 33
+  api_name: 新建营销活动
+  discriptions: 新建营销活动
+  url: internal/activity/market/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "activity_content": "618活动",
+    "activity_end_time": "2019-09-20T06:33:20.484Z",
+    "activity_start_time": "2019-09-20T06:33:20.484Z",
+    "activity_title": "活动标题",
+    "apply_end_time": "2019-09-20T06:33:20.484Z",
+    "cpm_reward_amount": 1,
+    "cpm_user_limit": 5,
+    "cps_product_rate": 1,
+    "plan_open_group_deposit_amount": 1,
+    "plan_open_group_user_limit": 10
+  }
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+- case_id: 34
+  api_name: 任务审核接口
+  discriptions: 只含测品任务，设置一个任务，审核通过，退还F保证金
+  url: internal/task/bill/audit
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "auditor": "admin",
+    "parent_cardNo": "$parent_cardNo",
+    "chird_cardNo": "$chird_cardNo",
+    "type": '8,9',
+    "subcard_status": 21,
+    "refuse_reason" : "验收不通过，延期"
+  }
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 35
+  api_name: 创建任务
+  discriptions: 创建商品任务只含测品
+  url: fapi/task/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "cpp": {
+      "reward_amount": 0.01,
+      "user_limit": 1
+    },
+    "cps": {
+      "reward_amount": 0.05,
+      "reward_vip_amount": 0.05
+    },
+    "task_info": {
+      "material_copywriting": "string",
+      "material_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_link": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_video": "string",
+      "material_video_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "platform": "string",
+      "task_desc": "string",
+      "task_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "task_name": "爆品"
+    },
+    "product_id": 1,
+    "task_end_time": 0,
+    "task_type": 0,
+    "market_activity_id": 0,
+  }
+  Expect:  {
+  "code": 0,
+  "message": "SUCCESS",
+  "result": true
+}
+
+
+
+- case_id: 36
+  api_name: 待结算标记
+  discriptions: 待结算标记
+  url: internal/task/bill/check/task/set/settle
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "auditor": "admin",
+    "parent_card_no": "$parent_cardNo",
+    "type": "8,9", #任务结算类型:8 保证金&补偿金,9 CPM , 10 CPS,type=10,这里暂不支持，走原来订单结算,扩展保留;多个type请用‘,’隔开，如：8,9
+    "spread_uuid": "5bea2cdf7663830006f140c2",
+    "subcard_status": 9,  #9=验收通过，21=验收不通过，22=F导致任务失败，23=V导致任务失败’
+    "refuse_reason": "验收"
+  }
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 37
+  api_name: 申请终止任务
+  discriptions: 申请终止任务
+  url: fapi/v4/activity/stop/ #{card_id}
+  method: post
+  header:
+    Content_Type: application/json
+  param: null
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 38
+  api_name: 确认终止任务
+  discriptions: 确认终止任务
+  url: internal/activity/cpm/stop/  #{card_id}
+  method: put
+  header:
+    Content_Type: application/json
+  param: null
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 39
+  api_name: 执行定时器，将可结算的订单写进任务结算审核表
+  discriptions: 执行定时器，将可结算的订单写进任务结算审核表
+  url: internal/task/bill/audit/putCanSettleOrderToAuditJodHandle
+  method: post
+  header:
+    Content_Type: application/json
+  param: null
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+
+- case_id: 40
+  api_name: 申请退货
+  discriptions: 成功申请退货
+  url: capi/order/return/apply
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+  "carrier_no": "555455550",
+  "certificates": [
+    "string"
+  ],
+  "company": "韵达快递",
+  "company_no": "YD",
+  "message": "留言啊",
+  "order_no": "101154503724637726",
+  "reason": "不想要了",
+  "type": 0,
+}
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+
+- case_id: 41
+  api_name: 创建任务
+  discriptions: 创建爆品任务
+  url: fapi/task/create
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "cpm": {
+      "reward_amount": 1,
+      "user_limit": 1
+    },
+    "cpp": {
+      "reward_amount": 1,
+      "user_limit": 1
+    },
+    "task_info": {
+      "material_copywriting": "string",
+      "material_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_link": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "material_video": "string",
+      "material_video_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "platform": "string",
+      "task_desc": "string",
+      "task_image": "http://static.d.intbee.com/userid/FqYwUTGAEdoxj15vPnd7CVnVd97i.png",
+      "task_name": "报名任务名称"
+    },
+    "task_type": 1
+  }
+  Expect:  {
+  "code": 0,
+  "message": "SUCCESS",
+  "result": true
+}
+
+
+- case_id: 42
+  api_name: 将终止或已结束的任务设置为可结算
+  discriptions: 将终止或已结束的任务设置为可结算
+  url: internal/task/bill/audit/taskSetSettleJodHandle?type=8,9
+  method: post
+  header:
+    Content_Type: application/json
+  param: null
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+- case_id: 43
+  api_name: 任务结算审核
+  discriptions: 通过审核
+  url: internal/task/bill/audit/task/order
+  method: post
+  header:
+    Content_Type: application/json
+  param: [
+  {
+    "auditor": "admin",
+    "card_no": "19-10179905-2210",
+    "cpm_receivable_sell": 0,
+    "cpp_receivable_sell": 1,
+    "id": 5,
+    "order_no": "1012019102310410240617079",
+    "receivable_spread": 1,
+    "remark": "审核通过",
+    "subcard_no": "19-10179905-2210-10179720",
+    "type": "8,9"
+  }
+  ]
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+- case_id: 44
+  api_name: 扫描结算状态已经是待审核的主任务,是否达到父任务结算条件
+  discriptions: 扫描结算状态已经是待审核的主任务,是否达到父任务结算条件
+  url: internal/task/bill/audit/taskSettleToDoneJodHandle
+  method: post
+  header:
+    Content_Type: application/json
+  param: null
+  Expect: {
+    "code": 0,
+    "message": "SUCCESS"
+  }
+
+

@@ -1,0 +1,27 @@
+- case_id: 0
+  api_name: V小程序
+  discriptions: V小程序-任务-任务列表-最热
+  url: /mapi/v3/card?limit=6&offset=0&searchBy=activity&searchText=%E6%8E%A8%E5%B9%BF%E8%B4%B9%E4%BB%BB%E5%8A%A1&orderby=apply_user_count%3Adesc
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 1
+  api_name: V小程序
+  discriptions: V小程序-任务-任务列表-最新
+  url: /mapi/v3/card?limit=6&offset=0&searchBy=activity&searchText=%E6%B5%8B%E5%93%81%E4%BB%BB%E5%8A%A1&orderby=create_time%3Adesc
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'

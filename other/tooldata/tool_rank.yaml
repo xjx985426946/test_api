@@ -1,0 +1,98 @@
+- case_id: 0
+  api_name: 用户中心注册
+  discriptions: 成功注册
+  url: api/uc//auth/register
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: $mobile
+    verify_code: '6666a'
+    password: 'e10adc3949ba59abbe56e057f20f883e'
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+- case_id: 1
+  api_name: 登录用户
+  discriptions: 用户密码成功登录
+  url: api/uc//auth/login
+  method: post
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: $mobile
+    password: 'e10adc3949ba59abbe56e057f20f883e'
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+
+
+- case_id: 2
+  api_name: V端添加用户
+  discriptions: V端添加用户
+  url: mapi/v3/user
+  method: get
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param:
+    mobile: $mobile
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 3
+  api_name: 浏览商品
+  discriptions: 浏览商品
+  url: mapi/v3/card/  #161454
+  method: get
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param: null
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 4
+  api_name: 接受蜂卡
+  discriptions: 成功接受蜂卡
+  url: mapi/v3/card  #17412/accept
+  method: post
+  header:
+    Content_Type: application/json
+  param: null
+  Expect:
+    code: 0
+    message: 'success'
+
+- case_id: 5
+  api_name: V端添加用户
+  discriptions: V端添加用户
+  url: mapi/v3/user/cert
+  method: get
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param: null
+  Expect:
+    code: 0
+    message: 'SUCCESS'
+
+- case_id: 6
+  api_name: V端添加用户
+  discriptions: V端添加用户
+  url: mapi/v3/user/certCompanyCache
+  method: get
+  header:
+    Content_Type: application/json
+    app_id: '101'
+  param: null
+  Expect:
+    code: 0
+    message: 'SUCCESS'

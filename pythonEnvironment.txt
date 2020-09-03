@@ -1,0 +1,50 @@
+﻿#python环境说明  python 3.x.x
+
+依赖插件
+pip3 install requests
+pip3 install pytest
+pip3 install pytest-html
+pip3 install pyyaml
+pip3 install configparser
+pip3 install BeautifulSoup4
+pip3 install dingtalkchatbot
+pip3 install pymysql
+pip3 install openpyxl
+pip3 install pytest-rerunfailures
+pip3 install tomorrow
+pip3 install pymongo
+pip3 install sshtunnel
+
+Framework version:1.1.0
+1：初步稳定实现接口自动化测试
+2：实现测试报告、日志的输出、文件的发送
+
+
+8045de5b43afd8899a380ae9f3a03638eebc1d2c62743c1853acab75f5151e49
+
+框架部署到jenkins环境
+构建 执行
+增加构建步骤 执行
+python 文件
+
+增加构建步骤 执行
+python3  send_dingding.py 文件
+
+report 目录下有 pytest_result.html文件 
+
+且外部输入地址可以访问到  pytest_result.html文件 
+
+2018－10-30: 1、新增接口脚本测试 2、修改用例描述   3、修改丁丁报告 自动@相关人员
+
+2018-10-31: 1、安装python3环境  pip3 install pymongo,pip3 install sshtunnel
+
+2018 - 11 -6 新增测试流程脚本
+
+
+回调接口：
+
+/public/pay/alipay/notify
+/public/anonymous/pay/alipay/notify
+/public/pay/wxpay/notify
+/public/anonymous/pay/wxpay/notify
+

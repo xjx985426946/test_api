@@ -1,0 +1,13 @@
+- case_id: 0
+  api_name: V小程序
+  discriptions: V小程序-任务-banner
+  url: /api/app/publicity/banner?application_type=2
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'

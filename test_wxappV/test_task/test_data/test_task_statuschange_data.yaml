@@ -1,0 +1,30 @@
+- case_id: 0
+  api_name: V小程序
+  discriptions: 申请任务
+  url: /mapi/v4/activity/apply/167152
+  method: post
+  header:
+    Content_Type: application/json
+  param: {
+    "apply_remark": "申请理由",
+    "plan_open_group_time": 1583337600000
+  }
+  Expect:  {
+    "code": 0,
+    "message": "SUCCESS",
+    "result": true
+  }
+
+- case_id: 0
+  api_name: V小程序
+  discriptions: V小程序-任务-任务进度
+  url: /mapi/v4/activity/statuschange/167152
+  method: get
+  header:
+    Content_Type: application/json
+  param:
+    type: 2
+
+  Expect:
+    code: 0
+    message: 'SUCCESS'
